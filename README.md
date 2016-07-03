@@ -4,8 +4,9 @@ This is not limited to PCF, but also ELK, Riak CS, MongoDB, Cassandra
 
 Legends:
 E - Editable
-R-Read-only
+R - Read-only
 
 PCF:
 
 Increase Quota for a Org (E): pcf-repo/Increase quota for a Org.docx
+Increase Quota for a Org (R): pcf-repo/Increase quota for a Org.pdf
