@@ -8,5 +8,6 @@ R - Read-only
 
 PCF:
 
-Increase Quota for a Org (E): pcf-repo/Increase quota for a Org.docx
-Increase Quota for a Org (R): pcf-repo/Increase quota for a Org.pdf
+Increase Quota for a Org (E): https://github.com/ichandan16/pcf-repo/blob/master/Increase%20quota%20for%20a%20Org.docx
+
+Increase Quota for a Org (R): https://github.com/ichandan16/pcf-repo/blob/master/Increase%20quota%20for%20a%20Org.pdf
