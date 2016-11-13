@@ -1,0 +1,4 @@
+applications:
+- name: pcf16immersion
+  path: .
+  buildpack: https://github.com/cloudfoundry-community/staticfile-buildpack
