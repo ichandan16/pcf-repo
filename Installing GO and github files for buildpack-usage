@@ -1,0 +1,89 @@
+1. Set the proxies to download the Go & github files. If you cannot download using wget, try to get it in your local workstation and transfer it using winscp tool.
+
+  set http_proxy=http://proxy.inbcu.com:80
+  set https_proxy=http://proxy.inbcu.com:80
+
+
+2. Download GO: 
+   wget https://storage.googleapis.com/golang/go1.7.3.linux-amd64.tar.gz
+
+   tar -C /usr/local -xzf go1.7.3.linux-amd64.tar.gz
+
+3. Add 2 environment variables in ~/.bashrc:
+
+  export GOPATH=/data/go/work
+  export PATH=$PATH:/usr/local/go/bin
+
+4. Create directories /data/go/work/src. This path is where all go files/projects will reside:
+  mkdir /data/go/work/src
+
+5. Inside /data/go/work/src, make a directory named hello
+
+6. Inside hello, create a file hello.go and put the content as :
+
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Printf("hello, world\n")
+}
+
+
+Run go install hello to compile files inside hello
+
+Run the file as: $GOPATH/bin/hello
+
+This indicates the Go is set.
+
+Installing customized buildpack-usage
+
+go get github.com/tom-collings/buildpack-usage
+cd $GOPATH/src/github.com/tom-collings/buildpack-usage
+
+GOOS=linux go build -o buildpack-usage-plugin-linux
+
+
+Once you are done this, unset the proxies:
+
+unset http_proxy
+unset https_proxy 
+
+If you already have a buildpack-usage plugin, run: cf uninstall-plugin buildpack-usage
+
+To install the plugin run: 
+cf install-plugin ./buildpack-usage-plugin-linux
+
+Use this as:
+
+# cf buildpack-usage
+Please select which buildpack whose apps you would like to see:
+1. staticfile_buildpack
+2. java_buildpack_offline
+3. ruby_buildpack
+4. nodejs_buildpack
+5. go_buildpack
+6. python_buildpack
+7. php_buildpack
+8. binary_buildpack
+9. go_buildpack_v1712
+10. java_buildpack_v38
+11. tibco_buildpack_sv21027_v1
+12. java_buildpack_v39
+13. tibco_buildpack_new
+14. php_buildpack_v4320
+15. go_buildpack_v174
+16. ruby_buildpack_v167
+17. nodejs_buildpack_158
+18. node_buildpack_1522
+
+Please choose: > 18
+
+Checking which apps use buildpack node_buildpack_1522 ...
+
+OK
+
+org             space                             application
+SRA-Analytics   SRA-Technology-Forecast-Manager   qa
+SRA-Analytics   SRA-Technology-Forecast-Manager   staging
+[root@aoaapld00130lb buildpack-usage]#
