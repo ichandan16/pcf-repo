@@ -21,13 +21,13 @@
 
 6. Inside hello, create a file hello.go and put the content as :
 
-package main
+    package main
 
-import "fmt"
+    import "fmt"
 
-func main() {
-    fmt.Printf("hello, world\n")
-}
+    func main() {
+        fmt.Printf("hello, world\n")
+    }
 
 
 Run go install hello to compile files inside hello
