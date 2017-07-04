@@ -1,0 +1,2 @@
+To show time of execution of hisotry commands: export HISTTIMEFORMAT='%F %T '
+Execute a command from history by the number: !<num_of_history_command>
