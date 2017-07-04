@@ -1,7 +1,7 @@
 1. Set the proxies to download the Go & github files. If you cannot download using wget, try to get it in your local workstation and transfer it using winscp tool.
 
-  set http_proxy=http://proxy.inbcu.com:80
-  set https_proxy=http://proxy.inbcu.com:80
+  set http_proxy=http://proxy.myserver.com:80
+  set https_proxy=http://proxy.myserver.com:80
 
 
 2. Download GO: 
@@ -86,4 +86,4 @@ OK
 org             space                             application
 SRA-Analytics   SRA-Technology-Forecast-Manager   qa
 SRA-Analytics   SRA-Technology-Forecast-Manager   staging
-[root@aoaapld00130lb buildpack-usage]#
+[root@myserver]#
